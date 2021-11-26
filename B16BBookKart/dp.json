@@ -1,0 +1,64 @@
+{
+"/api/Order/{userId}":[{
+    "get": {
+      "tags": [
+        "Order"
+      ],
+      "summary": "Get the list of all the orders placed by a particular user",
+      "parameters": [
+        {
+          "name": "userId",
+          "in": "path",
+          "description": "",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "description": "",
+            "format": "int32"
+          }
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Success",
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/OrdersDto"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/OrdersDto"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/OrdersDto"
+                }
+              }
+            }
+          }
+        },
+        "401": {
+          "description": "Unauthorized"
+        },
+        "403": {
+          "description": "Forbidden"
+        }
+      },
+      "security": [
+        {
+          "oauth2": [ ]
+        }
+      ]
+    }
+  }]}
