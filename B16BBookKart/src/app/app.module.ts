@@ -10,7 +10,7 @@ import {MatButtonModule}from '@angular/material/button'
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatRadioModule } from '@angular/material/radio';
-import { MatMenuModule } from '@angular/material/menu';
+import { MatMenuModule, MAT_MENU_PANEL } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatBadgeModule } from '@angular/material/badge';
@@ -25,16 +25,20 @@ import {COMPILER_OPTIONS} from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MyordersComponent,
+    NavBarComponent,
     
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,

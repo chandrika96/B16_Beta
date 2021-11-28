@@ -39,10 +39,12 @@ export class MyordersComponent implements OnInit,OnDestroy {
     this.userId = localStorage.getItem('userId');
   }
   ngOnInit(): void {
+    
     this.isLoading = true;
     this.myOrderDetails();
   }
   myOrderDetails() {
+    
     this.service.myOrderDetails(this.userId)
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe((result : Order[]) =>  {

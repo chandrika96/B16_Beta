@@ -1,0 +1,20 @@
+<mat-toolbar color="primary" class="mat-elevation-z10">
+    <a mat-button><span style="font-size: 20px;"><mat-icon style="padding-top: 10px">book</mat-icon> Book Cart</span></a>
+    <div class="spacer"></div>
+    <div class="search-container">
+        <form action="/action_page.php">
+          <input type="text" placeholder="Search books or authors" name="search"> 
+        </form>
+      </div>
+      <div class="spacer"></div>
+    <a mat-button><mat-icon>favorite</mat-icon></a>
+    <a mat-button><mat-icon>shopping_cart</mat-icon></a>
+    <!-- <a mat-button routerLink="login">Login</a> -->
+    <div>
+     <button mat-button >Login</button>
+        <mat-menu #menu="">
+            <button mat-menu-item>My Orders</button>
+            <button mat-menu-item>Logout</button>
+        </mat-menu>
+    </div>
+  </mat-toolbar>
