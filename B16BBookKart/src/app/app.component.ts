@@ -22,6 +22,6 @@ export class AppComponent {
     this.userId = localStorage.getItem('userId');
   }
 ngOnInit() {
-debugger;
+
 }
 }

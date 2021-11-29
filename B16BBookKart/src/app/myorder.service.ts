@@ -8,10 +8,10 @@ import { Observable } from 'rxjs/internal/Observable';
 export class MyorderService {
 readonly baseUrl :string = 'https://bookcart.azurewebsites.net/api/Order/';
 
-bookId:any;
+
   constructor(private http: HttpClient) { }
 
-  myOrderDetails(userId:any):Observable<any>{
-    return this.http.get<number>(this.baseUrl + userId);
+  myOrderDetails(userId:any){
+    return this.http.get<any>(this.baseUrl + userId);
   }
 }

@@ -26,12 +26,13 @@ export class MyordersComponent implements OnInit,OnDestroy {
   displayedColumns: string[] = ['orderId', 'orderedOn', 'orderTotal'];
   dataSource = new MatTableDataSource<Order>();
   expandedElement: null | undefined;
+  formGroup!: string;
   @ViewChild(MatPaginator) set matPaginator(mp: MatPaginator) {
 
     this.dataSource.paginator = mp;
   }
   userId:any;
-  isLoading!: boolean;
+  isLoading: boolean | undefined;
   
   private unsubscribe$ = new Subject<void>();
 
@@ -46,7 +47,6 @@ export class MyordersComponent implements OnInit,OnDestroy {
   myOrderDetails() {
     
     this.service.myOrderDetails(this.userId)
-      .pipe(takeUntil(this.unsubscribe$))
       .subscribe((result : Order[]) =>  {
         if (result != null) {
           this.dataSource.data = Object.values(result);

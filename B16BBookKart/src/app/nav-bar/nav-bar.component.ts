@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.scss'],
-  exportAs:'login'
+  exportAs:'matMenu'
 })
 export class NavBarComponent implements OnInit {
 
