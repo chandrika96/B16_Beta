@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { AuthenticationService } from './authentication.service';
+import { CartService } from './cart.service';
+import { SubscriptionService } from './subscription.service';
 
 
 import { User } from './user';
+import { WishlistService } from './wishlist.service';
 
 @Component({
   selector: 'app-root',
@@ -11,17 +15,14 @@ import { User } from './user';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  userId;
-  
+  title = 'ClientApp';
 
-  constructor(
-    private router: Router,
-    
-   ) {
-
-    this.userId = localStorage.getItem('userId');
+  constructor(private authService: AuthenticationService) {
+    if (!localStorage.getItem('authToken')) {
+      this.authService.setTempUserId();
+    }
+    this.authService.setUserDetails();
   }
-ngOnInit() {
+}
 
-}
-}
+   

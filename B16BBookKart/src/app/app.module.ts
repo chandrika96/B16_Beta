@@ -5,34 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MyordersComponent } from './myorders/myorders.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatToolbarModule}from '@angular/material/toolbar'
-import {MatButtonModule}from '@angular/material/button'
-import { MatInputModule } from '@angular/material/input';
-import { MatCardModule } from '@angular/material/card';
-import { MatRadioModule } from '@angular/material/radio';
-import { MatMenuModule, MAT_MENU_PANEL } from '@angular/material/menu';
-import { MatListModule } from '@angular/material/list';
-import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { MatBadgeModule } from '@angular/material/badge';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSliderModule } from '@angular/material/slider';
-import { MatSelectModule } from '@angular/material/select';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatIconModule } from '@angular/material/icon';
-import { MatTableModule} from '@angular/material/table';
 import {COMPILER_OPTIONS} from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
 
-import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CommonModule } from '@angular/common';
+import { NgMaterialModule } from './ng-material/ng-material.module';
+import { BookDetailsComponent } from './book-details/book-details.component';
+import { LoginComponent } from './login/login.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MyordersComponent,
+    BookDetailsComponent,
+    LoginComponent,
     NavBarComponent,
     
   ],
@@ -43,25 +30,7 @@ import { CommonModule } from '@angular/common';
     ReactiveFormsModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatIconModule,
-    MatInputModule,
-    MatCardModule,
-    MatRadioModule,
-    MatMenuModule,
-    MatListModule,
-    MatAutocompleteModule,
-    MatBadgeModule,
-    MatFormFieldModule,
-    MatSliderModule,
-    MatSelectModule,
-    MatPaginatorModule,
-    MatProgressSpinnerModule,
-    MatTableModule,
-    HttpClientModule,
-    MatSnackBarModule,
-    
+    NgMaterialModule
    
   ],
  
