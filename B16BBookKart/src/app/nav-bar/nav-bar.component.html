@@ -1,14 +1,20 @@
 <mat-toolbar color="primary" class="docs-navbar-header mat-elevation-z2">
     <mat-toolbar-row>
-  
-            <ng-container *ngIf="userData.isLoggedIn">
-                <button mat-button [matMenuTriggerFor]="menu">
-                    <mat-icon>account_circle</mat-icon> {{userData.username}} <mat-icon>arrow_drop_down</mat-icon>
-                </button>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item [routerLink]='["/myorders"]'>My Orders</button>
-                    <button mat-menu-item (click)=logout()>Logout</button>
-                </mat-menu>
-            </ng-container>
+      <div class="brand-title">
+        <button mat-button [routerLink]='["/login"]'>
+            <mat-icon>book</mat-icon> Book Cart
+        </button>
+    </div>
+    <div>
+      <button mat-button [matMenuTriggerFor]="menu">
+          <mat-icon>account_circle</mat-icon> 
+          Login <mat-icon>arrow_drop_down</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="/myorders"routerLinkActive="link-active">My Orders</button>
+          <button mat-menu-item (click)="logout()">Logout</button>
+      </mat-menu>
+ 
+        </div>
     </mat-toolbar-row>
   </mat-toolbar>

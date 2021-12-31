@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +12,10 @@ import { NgMaterialModule } from './ng-material/ng-material.module';
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { LoginComponent } from './login/login.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { HttpClientModule } from '@angular/common/http';
+
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -20,7 +24,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     MyordersComponent,
     BookDetailsComponent,
     LoginComponent,
-    NavBarComponent,
+    NavBarComponent
     
   ],
   imports: [
@@ -30,7 +34,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     ReactiveFormsModule,
     FormsModule,
     BrowserAnimationsModule,
-    NgMaterialModule
+    NgMaterialModule,
+    HttpClientModule
    
   ],
  

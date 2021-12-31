@@ -9,14 +9,14 @@ import { User } from './user';
 })
 export class AuthenticationService {
   
-  oldUserId!: any;
+  oldUserId: any;
 
   constructor(
     private http: HttpClient,
     private subscriptionService: SubscriptionService) { }
 
   login(user: any) {
-    return this.http.post<any>('/api/login', user)
+    return this.http.post<any>('https://bookcart.azurewebsites.net/api/Login', user)
       .pipe(map(response => {
         if (response && response.token) {
           this.oldUserId = localStorage.getItem('userId');
@@ -32,7 +32,7 @@ export class AuthenticationService {
   setUserDetails() {
     if (localStorage.getItem('authToken')) {
       const userDetails = new User();
-      const decodeUserDetails = JSON.parse(atob(localStorage.getItem('authToken')||'{}'));
+      const decodeUserDetails = JSON.parse(atob(localStorage.getItem('authToken')!.split(".")[1])||'{}');
 
       userDetails.userId = decodeUserDetails.userid;
       userDetails.username = decodeUserDetails.sub;

@@ -1,1 +1,34 @@
-<p>book-details works!</p>
+<div class="docs-example-viewer-wrapper">
+<div  class="docs-example-viewer-title mat-elevation-z2">
+<div  class="docs-example-viewer-title-spacer">
+    <h2>Book Details</h2>
+</div>
+<div class="outer">
+    <div class="image">
+        <img src="assets\HP.jpg" alt="Book Image">
+    </div>
+    <div class="row" >
+  <table  >
+        <tr >
+            <th>Title</th>
+            <td>{{bookDetails.title}}</td>
+        </tr>
+        <tr>
+            <th>Author</th>
+            <td>{{bookDetails.author}}</td>
+        </tr>
+        <tr>
+            <th>Category</th>
+            <td>{{bookDetails.category}}</td>
+        </tr>
+        <tr>
+        <th>Price</th>
+        <td>{{bookDetails.price | currency:"INR"}}</td>
+        </tr>
+    </table>
+    <div class="cart">
+    <button id="b1">Add to Cart</button>
+    <button id="b2">Add to Whishlist</button>
+</div>
+</div>
+</div>

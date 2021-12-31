@@ -13,7 +13,7 @@ export class WishlistService {
   constructor(
     private http: HttpClient,
     private subscriptionService: SubscriptionService) {
-    this.baseURL = '/api/Wishlist/';
+    this.baseURL = 'https://bookcart.azurewebsites.net/api/Wishlist/';
   }
 
   toggleWishlistItem(userId: number, bookId: number) {

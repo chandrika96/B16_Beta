@@ -1,0 +1,124 @@
+{
+  "/api/Order/{userId}":[
+    {
+      "orderId": "855-402979",
+      "orderDetails": [
+        {
+          "book": {
+            "bookId": 4,
+            "title": "HP4",
+            "author": null,
+            "category": null,
+            "price": 321,
+            "coverFileName": null
+          },
+          "quantity": 3
+        },
+        {
+          "book": {
+            "bookId": 2,
+            "title": "HP2",
+            "author": null,
+            "category": null,
+            "price": 234,
+            "coverFileName": null
+          },
+          "quantity": 2
+        },
+        {
+          "book": {
+            "bookId": 36,
+            "title": "The Hookup",
+            "author": null,
+            "category": null,
+            "price": 434,
+            "coverFileName": null
+          },
+          "quantity": 1
+        }
+      ],
+      "cartTotal": 1865,
+      "orderDate": "2021-11-21T00:00:00"
+    },
+    {
+      "orderId": "911-539657",
+      "orderDetails": [
+        {
+          "book": {
+            "bookId": 4,
+            "title": "HP4",
+            "author": null,
+            "category": null,
+            "price": 321,
+            "coverFileName": null
+          },
+          "quantity": 3
+        },
+        {
+          "book": {
+            "bookId": 2,
+            "title": "HP2",
+            "author": null,
+            "category": null,
+            "price": 234,
+            "coverFileName": null
+          },
+          "quantity": 2
+        },
+        {
+          "book": {
+            "bookId": 36,
+            "title": "The Hookup",
+            "author": null,
+            "category": null,
+            "price": 434,
+            "coverFileName": null
+          },
+          "quantity": 1
+        }
+      ],
+      "cartTotal": 1865,
+      "orderDate": "2021-11-21T00:00:00"
+    },
+    {
+      "orderId": "916-861778",
+      "orderDetails": [
+        {
+          "book": {
+            "bookId": 4,
+            "title": "HP4",
+            "author": null,
+            "category": null,
+            "price": 321,
+            "coverFileName": null
+          },
+          "quantity": 3
+        },
+        {
+          "book": {
+            "bookId": 2,
+            "title": "HP2",
+            "author": null,
+            "category": null,
+            "price": 234,
+            "coverFileName": null
+          },
+          "quantity": 2
+        },
+        {
+          "book": {
+            "bookId": 36,
+            "title": "The Hookup",
+            "author": null,
+            "category": null,
+            "price": 434,
+            "coverFileName": null
+          },
+          "quantity": 1
+        }
+      ],
+      "cartTotal": 1865,
+      "orderDate": "2021-11-21T00:00:00"
+    }
+  ]
+  }

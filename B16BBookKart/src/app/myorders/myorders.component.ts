@@ -1,4 +1,5 @@
-import { trigger, state, style, transition, animate } from '@angular/animations';
+
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
@@ -26,18 +27,18 @@ export class MyordersComponent implements OnInit,OnDestroy {
   displayedColumns: string[] = ['orderId', 'orderedOn', 'orderTotal'];
   dataSource = new MatTableDataSource<Order>();
   expandedElement: null | undefined;
-  formGroup!: string;
+  
   @ViewChild(MatPaginator) set matPaginator(mp: MatPaginator){
 
     this.dataSource.paginator = mp;
   }
-  userId;
-  isLoading!: boolean;
+  userId=339;
+  isLoading: boolean | undefined;
   
   private unsubscribe$ = new Subject<void>();
 
   constructor(private service: MyorderService) {
-    this.userId = localStorage.getItem('userId');
+    this.userId ;
   }
   ngOnInit(){
     
@@ -45,7 +46,7 @@ export class MyordersComponent implements OnInit,OnDestroy {
     this.getMyOrderDetails();
   }
   getMyOrderDetails() {
-    this.service.myOrderDetails(this.userId)
+    this.service.myOrderDetails()
     .pipe(takeUntil(this.unsubscribe$))
     .subscribe((result: Order[]) => {
       if (result != null) {

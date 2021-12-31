@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box;
+    margin: 1px; 
+ 
+ }
+ .docs-example-viewer-wrapper {
+    border: 0;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 24%), 0 0 2px rgb(0 0 0 / 12%);
+    margin: 13em;
+    border-radius: 4px;
+  }
+   h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
+    display: block;
+    font-size: 1.5em;
+    margin: auto;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+  }
+  .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  .docs-example-viewer-title-spacer{
+     box-sizing:border-box;
+     border-radius: 2px;
+     border-style: none;
+     background-color: rgba(255, 20, 98, 0.836);
+     color: whitesmoke;
+     text-align: left;
+     padding:3px;
+     justify-content: center;
+     margin: 4px;
+     padding: 4px 0 1px 4px;
+ 
+ }
+ 
+ 
+ img{
+     width:220px;
+     height:330px;
+     margin-left:5px;
+     overflow: hidden;
+     padding: 15px;
+ }
+ img:hover{
+     transform: scale(1.5);
+ }
+  .outer{
+      float: left;
+      width: 33.33%;
+      padding: 5px;
+     position: relative;
+     width: 600px;
+     top:30%;
+     left:32%;
+     transform: translate(-50%,-50%);
+     box-sizing: border-box;
+     padding: 2px;
+     background-color: white;
+     font-size: 20px;
+     display: flex; 
+     align-content: center;
+     align-items: center;
+     justify-content: center;
+     overflow: hidden;
+     transition: transform .5s;
+     display: flex;
+ }
+ table{
+     box-sizing: content-box;
+     margin-left: 30px;
+     width: 100%;
+ }
+   td,th{
+ 
+     border-bottom: 2px solid #ddd;
+     border-right: max ;
+     padding: 18px;
+     text-align: left;
+     margin-left: 20px;
+     font-size: 18px;
+ }
+ 
+  .outer table{
+     width:100;
+     flex:0 0 150px;
+ }
+ #b1{
+     background-color: rgba(0, 0, 139, 0.753);
+     border-radius: 5px;
+     font-size: 15px;
+     padding: 2px 4px 8px 8px;
+     color: white;
+     border-style:none;
+ 
+ }
+ #b2{
+     background-color: rgba(0, 128, 0, 0.76);
+     border-radius: 5px;
+     margin-left: 2px;
+     font-size: 15px;
+     padding: 2px 4px 8px 4px;
+     color: white;
+     border-style:none;
+ 
+ }
+ .mat-icon{
+     color: white;
+     font-size: 18px;
+     padding:4px 2px 0 2px;
+ 
+ }
+  .cart{
+     margin: 20px;
+     font-size: 20px;
+     border-style:none;
+ 
+ }
+ @media screen and (max-width:780px) {
+     .title .outer img .table .cart{
+         width: 100%;
+     }
+ 
+ 
+ } 
